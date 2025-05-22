@@ -22,9 +22,10 @@ const VideoImagePicker = ({ show, setShow, setCurrentImage }: Props) => {
 
   useEffect(() => {
     if (!isLoading && devices.length > 0 && selectedDevice === "default") {
-      const videoDevices = devices.filter(
-        (device) => device.kind === "videoinput"
-      );
+      // const videoDevices = devices.filter(
+      //   (device) => device.kind === "videoinput"
+      // );
+      const videoDevices = devices;
       setSelectedDevice(videoDevices[0].deviceId);
       startVideo(videoDevices[0].deviceId);
     }
