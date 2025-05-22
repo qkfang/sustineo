@@ -38,6 +38,7 @@ import { IoCameraOutline } from "react-icons/io5";
 import FileImagePicker, {
   type FileInputHandle,
 } from "components/fileimagepicker";
+import Layout from "app/layout";
 
 const queryClient = new QueryClient();
 
@@ -269,6 +270,7 @@ export default function Home() {
             id={"voice-agent-settings"}
             icon={<TbArticle size={18} />}
             className={styles.editor}
+            >
             <QueryClientProvider client={queryClient}>
               <AgentEditor />
             </QueryClientProvider>
@@ -289,7 +291,6 @@ export default function Home() {
           console.log("Image selected", image);
         }}
       />
-    </QueryClientProvider>
     </Layout>
   );
 }

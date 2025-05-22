@@ -8,6 +8,10 @@ from api.agent.decorators import agent
 from api.agent.storage import get_storage_client
 from api.model import AgentUpdateEvent, Content
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 AZURE_IMAGE_ENDPOINT = os.environ.get("AZURE_IMAGE_ENDPOINT", "EMPTY").rstrip("/")
 AZURE_IMAGE_API_KEY = os.environ.get("AZURE_IMAGE_API_KEY", "EMPTY")
