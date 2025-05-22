@@ -17,6 +17,10 @@ from prompty.core import Prompty
 from api.model import Agent, AgentUpdateEvent, Function
 from api.agent.handler import SustineoAgentEventHandler
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 FOUNDRY_CONNECTION = os.environ.get("FOUNDRY_CONNECTION", "EMPTY")
 foundry_agents: dict[str, Agent] = {}
 custom_agents: dict[str, Prompty] = {}
