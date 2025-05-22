@@ -17,6 +17,10 @@ from openai.types.beta.realtime.session_update_event import SessionTool
 from api.model import Configuration, DefaultConfiguration
 
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 COSMOSDB_CONNECTION = os.getenv("COSMOSDB_CONNECTION", "fake_connection")
 DATABASE_NAME = "sustineo"
 CONTAINER_NAME = "VoiceConfigurations"
